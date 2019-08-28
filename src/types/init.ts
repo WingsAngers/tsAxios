@@ -1,3 +1,5 @@
+import { timeouts } from '_@types_retry@0.12.0@@types/retry'
+
 export type Methods =
   | 'get'
   | 'GET'
@@ -19,6 +21,7 @@ export interface AxiosRequestConfig {
   data?: any
   params?: any
   headers?: any
+  timeout?: number
 }
 export interface AxiosResponse {
   data: any
