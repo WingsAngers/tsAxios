@@ -1,5 +1,3 @@
-import { timeouts } from '_@types_retry@0.12.0@@types/retry'
-
 export type Methods =
   | 'get'
   | 'GET'
@@ -34,4 +32,12 @@ export interface AxiosResponse {
 export interface AxiosPromise extends Promise<AxiosResponse> {}
 export interface AxiosRequestConfig {
   responseType?: XMLHttpRequestResponseType
+}
+
+export interface AxoisError extends Error {
+  config: AxiosRequestConfig
+  code?: string
+  request?: any
+  response?: AxiosResponse
+  isAxiosError: boolean
 }
