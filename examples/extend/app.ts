@@ -16,7 +16,7 @@ axios.request({
   }
 })
 
-axios.get('/extend/get')
+axios.get('/extend/user')
 
 axios.options('/extend/options')
 
