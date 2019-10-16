@@ -33,6 +33,8 @@ registerErrorRouter()
 
 registerExtendRouter()
 
+registerIntercepterRouter()
+
 app.use(router)
 
 const port = process.env.PORT || 8080
@@ -131,5 +133,11 @@ function registerExtendRouter () {
         age: 18
       }
     })
+  })
+}
+
+function registerIntercepterRouter() {
+  router.get('/interceptor/get', function(req, res) {
+    res.json('hello')
   })
 }
